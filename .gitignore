@@ -1,0 +1,8 @@
+# Build artifacts
+/znn-address-generator-go
+/znn-address-generator-go.exe
+*.exe
+*.test
+
+# results
+results/

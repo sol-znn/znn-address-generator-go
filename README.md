@@ -16,11 +16,11 @@ go build -o znn-address-generator-go .
 
 ## Releases
 
-Download compiled binaries for Windows/Linux/macOS [here](https://github.com/sol-znn/znn-address-generator-go/releases/latest).
+Download compiled binaries for Windows/Linux/macOS from the [latest release](https://github.com/sol-znn/znn-address-generator-go/releases/latest).
 
 ## Options
 
-```
+```text
 Zenon Address Generator
 Usage: znn-address-generator-go [OPTIONS]
 
@@ -35,37 +35,38 @@ Options
       --all             save all generated mnemonics, even if they don't match
   -v, --verbose         display mnemonics as they're being generated
   -h, --help            Displays help information
+      --version         Displays version information
 ```
 
 ## Usage
 
 You can mix and match whatever settings you want.
 
-#### Generate 1000 mnemonics with 8 threads
+### Generate 1000 mnemonics with 8 threads
 
 ```bash
 znn-address-generator-go -n 1000 -t 8
 ```
 
-#### Find an address with suffix 321
+### Find an address with suffix 321
 
 ```bash
 znn-address-generator-go -s 321
 ```
 
-#### Find an address with prefix zzz and suffix 321
+### Find an address with prefix zzz and suffix 321
 
 ```bash
 znn-address-generator-go -p zzz -s 321
 ```
 
-#### Find an address with suffix 321 and save all generated mnemonics to a separate file
+### Find an address with suffix 321 and save all generated mnemonics to a separate file
 
 ```bash
 znn-address-generator-go -s 321 --all
 ```
 
-#### Keep searching for addresses with suffix 321 until stopped
+### Keep searching for addresses with suffix 321 until stopped
 
 ```bash
 znn-address-generator-go -s 321 --infinite

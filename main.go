@@ -7,6 +7,10 @@ import (
 	"sync"
 )
 
+// version is set via -ldflags "-X main.version=x.y.z" when building a release;
+// it defaults to the current development version otherwise.
+var version = "1.0.0"
+
 func main() {
 	settings := parseArgs(os.Args[1:])
 	displaySettings(settings)

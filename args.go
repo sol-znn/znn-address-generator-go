@@ -27,6 +27,7 @@ var flagSpecs = []flagSpec{
 	{[]string{"all"}, true, "save all generated mnemonics, even if they don't match"},
 	{[]string{"v", "verbose"}, true, "display mnemonics as they're being generated"},
 	{[]string{"h", "help"}, true, "Displays help information"},
+	{[]string{"version"}, true, "Displays version information"},
 }
 
 // specByName maps every flag name (short and long) to its spec.
@@ -108,6 +109,11 @@ func parseArgs(args []string) *Settings {
 
 	if seen["help"] {
 		menu(usageText())
+		os.Exit(0)
+	}
+
+	if seen["version"] {
+		fmt.Printf("znn-address-generator-go v%s\n", version)
 		os.Exit(0)
 	}
 
